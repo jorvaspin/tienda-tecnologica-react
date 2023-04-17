@@ -13,7 +13,7 @@
             padding: 50px 0;
         }
         .col {
-            max-width: 300px;
+            max-width: 50%;
             &:nth-child(3) {
                 width: 150px;
                 @include md {

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { createContext, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Context = createContext();
 
@@ -34,8 +36,15 @@ const AppContext = ({ children }) => {
         let items = [...cartItems];
         let index = items?.findIndex((p) => p.id === product?.id);
         if (index !== -1) {
+            toast.success("Producto añadido correctamente.", {
+                position: toast.POSITION.BOTTOM_RIGHT
+            });
             items[index].attributes.quantity += quantity;
         } else {
+            toast.success("Producto añadido correctamente.", {
+                position: toast.POSITION.BOTTOM_RIGHT
+            });
+        
             product.attributes.quantity = quantity;
             items = [...items, product];
         }

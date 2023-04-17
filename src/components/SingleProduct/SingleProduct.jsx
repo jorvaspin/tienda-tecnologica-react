@@ -11,6 +11,7 @@ import {
     FaPinterest,
     FaCartPlus,
 } from "react-icons/fa";
+import { ToastContainer } from 'react-toastify';
 import "./SingleProduct.scss";
 
 const SingleProduct = () => {
@@ -34,6 +35,7 @@ const SingleProduct = () => {
 
     return (
         <div className="single-product-main-content">
+            <ToastContainer />
             <div className="layout">
                 <div className="single-product-page">
                     <div className="left">
