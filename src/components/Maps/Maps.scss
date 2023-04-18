@@ -1,0 +1,21 @@
+@import "../../css-config/mixins.scss";
+.maps {
+    position: relative;
+    background-image: linear-gradient(to right, #f18828, #ca3a2b);
+    @include md {
+        height: 100vh;
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        @include md {
+            flex-direction: row;
+        }
+    }
+}
